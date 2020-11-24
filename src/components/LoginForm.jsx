@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 const LoginForm = (props) => {
   const { handleLogin } = props;
   const [username, setUsername] = useState('');
@@ -11,8 +12,7 @@ const LoginForm = (props) => {
   };
   return (
     <div>
-      <div>Enter Username</div>
-      <input onChange={onChangeUsername}></input>
+      <input placeholder="Enter your name" onChange={onChangeUsername}></input>
       <button onClick={onLoginClick}>Log In!</button>
     </div>
   );

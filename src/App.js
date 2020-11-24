@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import ProtectedRoute from './utils/ProtectedRoute';
 import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
