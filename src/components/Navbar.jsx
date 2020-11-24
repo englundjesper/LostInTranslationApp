@@ -2,15 +2,24 @@ import React, { useState } from 'react';
 import * as AuthService from '../services/AuthService';
 
 const Navbar = (props) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(AuthService.isAuthenticated());
+  const [isLoggedIn, setIsLoggedIn] = useState(AuthService.isAuthenticated());
+
   const logoutHandler = () => {
+    props.history.push('/login');
+    setIsLoggedIn(false);
     AuthService.logout();
   };
 
   return (
     <div>
-      <div>navbar</div>
-      {isAuthenticated ? <button onClick={logoutHandler}>Log out</button> : ''}
+      {isLoggedIn ? (
+        <div>
+          <span>Logged in</span>
+          <button onClick={logoutHandler}>Log out</button>{' '}
+        </div>
+      ) : (
+        <span>Not logged in</span>
+      )}
     </div>
   );
 };
