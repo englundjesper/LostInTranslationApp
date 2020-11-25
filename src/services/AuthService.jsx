@@ -1,5 +1,6 @@
 export const login = (username) => {
   window.localStorage.setItem('username', username);
+  window.location.reload();
 };
 
 export const isAuthenticated = () => {
@@ -15,6 +16,6 @@ export const getLoggedInUser = () => {
 
 export const logout = () => {
   if (window.localStorage.getItem('username') != null) {
-    window.localStorage.removeItem('username');
+    window.localStorage.clear();
   }
 };
