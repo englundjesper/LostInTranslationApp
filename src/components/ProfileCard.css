@@ -1,0 +1,22 @@
+.profile-card{
+    min-width: 600px;
+}
+
+.item-list{
+    border-radius: 16px;
+    background: rgb(55, 92, 124);
+    border: 1px solid rgb(55, 92, 124);
+}
+
+.item{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 16px;
+}
+
+.item-odd{
+    background-color: lightgray;
+}
+.item-even{
+    background-color: #f3f3f3;
+}
