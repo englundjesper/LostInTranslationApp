@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const LoginForm = (props) => {
   const { handleLogin } = props;
@@ -13,7 +14,10 @@ const LoginForm = (props) => {
   return (
     <div>
       <input placeholder="Enter your name" onChange={onChangeUsername}></input>
-      <button onClick={onLoginClick}>Log In!</button>
+      &nbsp;
+      <Button onClick={onLoginClick} variant="success" size="lg">
+        Log In
+      </Button>{' '}
     </div>
   );
 };
