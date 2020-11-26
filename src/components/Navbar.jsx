@@ -3,6 +3,7 @@ import * as AuthService from '../services/AuthService';
 import { Navbar as BootstrapNavbar, Nav, Button } from 'react-bootstrap';
 const Navbar = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useState(AuthService.isAuthenticated());
+  const loggedInUser = AuthService.getLoggedInUser();
 
   const logoutHandler = () => {
     props.history.push('/login');
@@ -11,17 +12,23 @@ const Navbar = (props) => {
   };
 
   return (
-    <BootstrapNavbar>
-      <Nav>
+    <BootstrapNavbar className="mb-5" bg="light" expand="lg">
+      <BootstrapNavbar.Brand href="/">Lost in Tranlation</BootstrapNavbar.Brand>
+      <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" className="text-center" />
+      <BootstrapNavbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/profile">{isLoggedIn ? loggedInUser : 'Your profile'}</Nav.Link>
+        </Nav>
         {isLoggedIn ? (
           <div>
-            <span>Logged in</span>
-            <Button onClick={logoutHandler}>Log out</Button>{' '}
+            <Button variant="danger" onClick={logoutHandler}>
+              Log out
+            </Button>
           </div>
         ) : (
-          <span>Not logged in</span>
+          ''
         )}
-      </Nav>
+      </BootstrapNavbar.Collapse>
     </BootstrapNavbar>
   );
 };
