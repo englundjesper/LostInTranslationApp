@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  width: 100vw;
+  height: 43vw;
+ 
+}
+
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h3 {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+Button {
+  width: 10%;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
