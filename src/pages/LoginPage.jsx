@@ -17,16 +17,24 @@ class LoginPage extends React.Component {
     return (
       <>
         <div>
-          <Card className="text-center">
-            <Card.Header>Lost in Translation</Card.Header>
-            <Card.Body>
-              <Card.Title>Welcome to Lost in Translation!</Card.Title>
-              <Card.Text>Get started!</Card.Text>
-              <Card className="blockquote mb-0 card-body">
-                <LoginForm handleLogin={this.handleLogin}></LoginForm>
-              </Card>
-            </Card.Body>
-          </Card>
+          <div className="card w-75">
+            <Card className="text-center">
+              <div className="card text-white bg-warning mb-3">
+                <Card.Body>
+                  <Card.Title>
+                    <h1>Welcome to Lost in Translation!</h1>
+                  </Card.Title>
+                  &nbsp;
+                  <Card.Text>
+                    <h3>Get started</h3>
+                  </Card.Text>
+                  <div className="blockquote mb-0 card-body">
+                    <LoginForm handleLogin={this.handleLogin}></LoginForm>
+                  </div>
+                </Card.Body>
+              </div>
+            </Card>
+          </div>
         </div>
       </>
     );
