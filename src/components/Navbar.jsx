@@ -12,12 +12,20 @@ const Navbar = (props) => {
   };
 
   return (
-    <BootstrapNavbar className="mb-5" bg="light" expand="lg">
-      <BootstrapNavbar.Brand href="/">Lost in Tranlation</BootstrapNavbar.Brand>
+    <BootstrapNavbar bg="warning" expand="lg">
+      <BootstrapNavbar.Brand className="text-white" href="/">
+        <b>Lost in Translation</b>
+      </BootstrapNavbar.Brand>
       <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" className="text-center" />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/profile">{isLoggedIn ? loggedInUser : 'Your profile'}</Nav.Link>
+          {isLoggedIn ? (
+            <Nav.Link className="text-white" href="/profile">
+              {loggedInUser}
+            </Nav.Link>
+          ) : (
+            ''
+          )}
         </Nav>
         {isLoggedIn ? (
           <div>

@@ -16,10 +16,9 @@ const ProfileCard = (props) => {
         <Row className="justify-content-center">
           <Col sm={8}>
             <div>
-              Here is your{' '}
               {translationList.length > 1
-                ? translationList.length + ' latest translations!'
-                : 'lastest translation!'}
+                ? `Here are your ${translationList.length} latest translations!`
+                : 'Here is your latest translation!'}
             </div>
           </Col>
           <Col sm={8} className="item-list mt-3">

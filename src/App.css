@@ -37,22 +37,12 @@
   }
 }
 
-.card {
-  width: 100vw;
-  height: 43vw;
- 
-}
-
 h1 {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 h3 {
   font-family: "Lucida Console", Monaco, monospace;
-}
-
-Button {
-  width: 10%;
 }
 
 input {
