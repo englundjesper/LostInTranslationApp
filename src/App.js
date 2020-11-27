@@ -1,24 +1,26 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import ProtectedRoute from './utils/ProtectedRoute';
 import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar></Navbar>
-        <Switch>
-          <Route exact path="/login" component={LoginPage} />
-          <ProtectedRoute exact path="/" component={HomePage} />
-          <ProtectedRoute exact path="/profile" component={ProfilePage} />
-        </Switch>
-      </Router>
-    </>
+    <Router history={history}>
+      <Navbar history={history}></Navbar>
+      <Switch>
+        <Route exact path="/login" component={LoginPage} />
+        <ProtectedRoute exact path="/" component={HomePage} />
+        <ProtectedRoute exact path="/profile" component={ProfilePage} />
+      </Switch>
+    </Router>
   );
 }
 
