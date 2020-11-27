@@ -12,12 +12,12 @@ As a logged in user you can translate to sign language and check your translatio
 ## How to run 
 * Clone the project, `git clone https://github.com/flaakan/LostInTranslationApp.git`
 * Open the project in Visual Studio Code.
-* Open up a terminal and run `npm install`.
+* Open up a terminal and run ``npm install`.
 * Type in `npm start` in the terminal.
 * Open the proposed localhost in your browser.
 
 ## Web page
 The web page has several endpoints:
-* `/` : This is the home page. It shows the login function.
-* `/login`: The same page as home page.
-* `/profile`: Displays a collection of all translations.)
+* `/` : This is the home page. If you are logged in you can translate a sentence to sign language.  Otherwise it will redirect you to `/login`.
+* `/login`: The login page, you can only enter this page if you are not logged in.
+* `/profile`: Displays a collection of all translations.
