@@ -9,14 +9,11 @@ This project is a translation application where you can translate regular text t
 To translate, you will need to type in your name and be logged in.  
 As a logged in user you can translate to sign language and check your translations in a collection.
 
-### Requirements
-The requirements to be able to run this project:
-* JavaScript VET EJ VILKEN EDITION. ELLER SKA VI SKRIVA VS-CODE HÄR?
-
 ## How to run 
 * Clone the project, `git clone https://github.com/flaakan/LostInTranslationApp.git`
 * Open the project in Visual Studio Code.
-* Type in "npm start" in the terminal.
+* Open up a terminal and run ``npm install`.
+* Type in `npm start` in the terminal.
 * Open the proposed localhost in your browser.
 
 ## Web page
