@@ -10,7 +10,7 @@ const TranslateForm = (props) => {
   };
 
   const onTranslateClick = () => {
-    handleTranslateClick(translation);
+    handleTranslateClick(translation.toLowerCase());
   };
 
   const TranslateFormButtonStyle = {
