@@ -12,7 +12,7 @@ As a logged in user you can translate to sign language and check your translatio
 ## How to run 
 * Clone the project, `git clone https://github.com/flaakan/LostInTranslationApp.git`
 * Open the project in Visual Studio Code.
-* Open up a terminal and run ``npm install`.
+* Open up a terminal and run `npm install`.
 * Type in `npm start` in the terminal.
 * Open the proposed localhost in your browser.
 
